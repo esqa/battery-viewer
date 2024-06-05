@@ -12,14 +12,11 @@ enum Color {
 };
 
 class DebugPrint {
-public:
-    void Initialize();
+    public:
+        void Print(std::string message, Color color, const char *funcName, int lineNum);
 
-    void TextColor(Color color);
-
-    void Print(std::string message, Color color, const char *funcName, int lineNum);
-
-private:
+    private:
+        void TextColor(Color color);
 };
 
 #endif//UNTITLED_PRINTING_H

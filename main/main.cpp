@@ -3,5 +3,5 @@
 int main() {
     DebugPrint start{};
 
-    start.Initialize();
+    start.DEBUG_PRINT("Hello, World!", LIGHTGREEN);
 }
