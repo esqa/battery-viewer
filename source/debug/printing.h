@@ -13,7 +13,7 @@ enum Color {
 
 class DebugPrint {
     public:
-        void DebugLog(std::string message, Color color, const char *funcName, int lineNum);
+        void DebugLog(std::string message, Color color, const char *function_name, int line_number);
 
         void Print(std::string message, Color color);
 

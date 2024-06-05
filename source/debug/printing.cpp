@@ -5,11 +5,11 @@ void DebugPrint::TextColor(Color color) // NOLINT
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
-void DebugPrint::DebugLog(std::string message, Color color, const char* funcName, int lineNum) // NOLINT
+void DebugPrint::DebugLog(std::string message, Color color, const char* function_name, int line_number) // NOLINT
 {
     TextColor(color); // get color
 
-    std::cout << "[" << funcName << "@" << lineNum << "] " << message << std::endl;
+    std::cout << "[" << function_name << "@" << line_number << "] " << message << std::endl;
 
     TextColor(WHITE); // restore color
 }

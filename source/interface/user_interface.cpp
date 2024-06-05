@@ -7,32 +7,55 @@
 void UserInterface::DisplayMenu() {
     DebugPrint debug_start{};
 
+    HWND hwnd = GetConsoleWindow();
     RECT rect;
 
-    HWND hwnd = GetConsoleWindow();
+    GetWindowRect(hwnd, &rect);
 
-    wants_to_exit_program = false;
+    m_previous_window_rect = rect;
+    m_wants_to_exit_program = false;
 
-    debug_start.Print("Want to exit program?", LIGHTGRAY);
-    debug_start.Print("Press 'Y' to exit", DARKGRAY);
+    while (!m_wants_to_exit_program) {
+        GetWindowRect(hwnd, &rect);
 
-    if(GetWindowRect(hwnd, &rect))
-    {
-        int width = rect.right - rect.left;
-        int height = rect.bottom - rect.top;
+        m_resize_state = false;
 
-        std::string width_str = std::to_string(width);
-        std::string height_str = std::to_string(height);
+        if (rect.right - rect.left != m_previous_window_rect.right - m_previous_window_rect.left ||
+            rect.bottom - rect.top != m_previous_window_rect.bottom - m_previous_window_rect.top) {
 
-        debug_start.Print(width_str, LIGHTGREEN);
-        debug_start.Print(height_str, LIGHTGREEN);
-    }
+            m_previous_window_rect = rect;
+            m_resize_state = true;
+        }
 
-    while (!wants_to_exit_program) {
-        exit_state = false;
+        m_window_width = m_previous_window_rect.left - m_previous_window_rect.right;
+        m_window_height = m_previous_window_rect.top - m_previous_window_rect.bottom;
+
+        int center = m_window_width / 10;
+
+        std::string width_string = std::to_string(m_window_width);
+        std::string height_string = std::to_string(m_window_height);
+
+        if (m_resize_state) { // window was resized
+            system("cls"); // reset everything
+
+            //add a blank before the text using center
+
+            int values[] = {1, 2, 3, 4, 5};
+            int n = sizeof(values) / sizeof(values[0]);
+
+            for (int i = 0; i < n; ++i) {
+                std::cout << values[i] << " ";
+            }
+
+            debug_start.Print("Want to exit program?", LIGHTGRAY);
+            debug_start.Print("Press 'Y' to exit", DARKGRAY);
+            debug_start.Print(std::to_string(center), LIGHTRED);
+
+            debug_start.DEBUG_PRINT(width_string + " " + height_string, LIGHTRED); // NOLINT
+        }
 
         if (GetAsyncKeyState('Y') & 0x8000) {
-            wants_to_exit_program = true;
+            m_wants_to_exit_program = true;
         }
     }
 }
