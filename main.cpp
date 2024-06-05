@@ -1,5 +1,3 @@
-#include <WinBase.h>
-#include <consoleapi2.h>
 #include <iostream>
 #include <windows.h>
 
@@ -11,7 +9,6 @@ int main() {
     EntryPoint start{};
 
     start.Initialize();
-
 }
 
 void EntryPoint::Initialize() {
