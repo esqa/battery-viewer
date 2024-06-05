@@ -1,7 +1,13 @@
 #include "../debug/printing.h"
+#include "../interface/user_interface.h"
+
+#include "main.h"
 
 int main() {
-    DebugPrint start{};
+    SetConsoleTitleA("internal");
 
-    start.DEBUG_PRINT("Hello, World!", LIGHTGREEN);
+    UserInterface ui{};
+    ui.DisplayMenu();
+
+    return 0;
 }
