@@ -1,3 +1,0 @@
-C:/Users/#/Documents/battery-viewer/build/release/CMakeFiles/untitled.dir
-C:/Users/#/Documents/battery-viewer/build/release/CMakeFiles/edit_cache.dir
-C:/Users/#/Documents/battery-viewer/build/release/CMakeFiles/rebuild_cache.dir
