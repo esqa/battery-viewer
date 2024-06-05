@@ -3,7 +3,7 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled main/main.cpp
-        main/main.h
-        debug/printing.cpp
-        debug/printing.h)
+add_executable(untitled source/main/main.cpp
+        source/main/main.h
+        source/debug/printing.cpp
+        source/debug/printing.h)

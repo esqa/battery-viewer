@@ -3,9 +3,9 @@
 
 #define DEBUG_PRINT(message, color) Print(message, color, __func__, __LINE__)
 
+#include <Windows.h>
 #include <iostream>
 #include <string>
-#include <windows.h>
 
 enum Color {
     BLACK, BLUE, GREEN, CYAN, RED, MAGENTA, BROWN, LIGHTGRAY, DARKGRAY, LIGHTBLUE, LIGHTGREEN, LIGHTCYAN, LIGHTRED, LIGHTMAGENTA, YELLOW, WHITE
