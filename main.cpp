@@ -12,13 +12,15 @@ int main() {
 }
 
 void EntryPoint::Initialize() {
-    TextColor(LIGHTCYAN);
-    DEBUGPRINT("hello from init");
-}
-
-void EntryPoint::Constructor() {
-
+    DebugPrint("Hello, World!", GREEN);
 }
 void EntryPoint::TextColor(Color color) { // NOLINT
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+void EntryPoint::DebugPrint(std::string message, Color color) { // NOLINT
+    TextColor(color); // get color
+
+    std::cout << message << std::endl;
+
+    TextColor(WHITE); // restore color
 }
