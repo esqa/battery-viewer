@@ -1,6 +1,14 @@
 #ifndef UNTITLED_USER_INTERFACE_H
 #define UNTITLED_USER_INTERFACE_H
 
+enum Padding {
+    padding_large = 700,
+    padding_medium = 600,
+    padding_small = 500,
+    padding_smallest = 250,
+    padding_count = 5
+};
+
 class UserInterface {
     public:
         void DisplayMenu();
