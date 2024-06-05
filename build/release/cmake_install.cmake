@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/#/CLionProjects/untitled
+# Install script for directory: C:/Users/#/Documents/battery-viewer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/#/CLionProjects/untitled/build/release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/#/Documents/battery-viewer/build/release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

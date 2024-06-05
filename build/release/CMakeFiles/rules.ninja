@@ -41,7 +41,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\Users\#\CLionProjects\untitled" -B"C:\Users\#\CLionProjects\untitled\build\release"
+  command = "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\Users\#\Documents\battery-viewer" -B"C:\Users\#\Documents\battery-viewer\build\release"
   description = Re-running CMake...
   generator = 1
 

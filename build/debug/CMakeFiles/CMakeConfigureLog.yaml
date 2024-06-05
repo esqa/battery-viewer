@@ -28,7 +28,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
       
       The C compiler identification is Clang, found in:
-        C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.exe
+        C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
@@ -72,7 +72,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
       
       The CXX compiler identification is Clang, found in:
-        C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.exe
+        C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.exe
       
   -
     kind: "message-v1"
@@ -105,8 +105,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-38ngjf"
-      binary: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-38ngjf"
+      source: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-l54cj4"
+      binary: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-l54cj4"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: "-m32"
@@ -116,11 +116,11 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-38ngjf'
+        Change Dir: 'C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-l54cj4'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_c20b2
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo   -m32  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_c20b2.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_c20b2.dir\\ -c -- "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c20b2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_c20b2.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_c20b2.exe /implib:cmTC_c20b2.lib /pdb:cmTC_c20b2.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console   && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_f26e9
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo   -m32  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_f26e9.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_f26e9.dir\\ -c -- "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_f26e9.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_f26e9.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_f26e9.exe /implib:cmTC_f26e9.lib /pdb:cmTC_f26e9.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console   && cd ."
         
       exitCode: 0
   -
@@ -132,8 +132,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-0ex0xf"
-      binary: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-0ex0xf"
+      source: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-6exa2m"
+      binary: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-6exa2m"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: "-m32"
@@ -143,11 +143,11 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-0ex0xf'
+        Change Dir: 'C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-6exa2m'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_2733a
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP   -m32  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_2733a.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_2733a.dir\\ -c -- "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_2733a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_2733a.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_2733a.exe /implib:cmTC_2733a.lib /pdb:cmTC_2733a.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console   && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_0e16f
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP   -m32  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_0e16f.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_0e16f.dir\\ -c -- "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_0e16f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_0e16f.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_0e16f.exe /implib:cmTC_0e16f.lib /pdb:cmTC_0e16f.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console   && cd ."
         
       exitCode: 0
   -
@@ -162,8 +162,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-bfvdbb"
-      binary: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-bfvdbb"
+      source: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-2xlil4"
+      binary: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-2xlil4"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: "-m32"
@@ -173,11 +173,11 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-bfvdbb'
+        Change Dir: 'C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-2xlil4'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_647de
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP   -m32  /Ob0 /Od /RTC1 -MDd -Zi   -std:c++14 /showIncludes /FoCMakeFiles\\cmTC_647de.dir\\feature_tests.cxx.obj /FdCMakeFiles\\cmTC_647de.dir\\ -c -- C:\\Users\\#\\CLionProjects\\untitled\\build\\debug\\CMakeFiles\\CMakeScratch\\TryCompile-bfvdbb\\feature_tests.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_647de.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_647de.dir\\feature_tests.cxx.obj  /out:cmTC_647de.exe /implib:cmTC_647de.lib /pdb:cmTC_647de.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_a084e
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP   -m32  /Ob0 /Od /RTC1 -MDd -Zi   -std:c++14 /showIncludes /FoCMakeFiles\\cmTC_a084e.dir\\feature_tests.cxx.obj /FdCMakeFiles\\cmTC_a084e.dir\\ -c -- C:\\Users\\#\\Documents\\battery-viewer\\build\\debug\\CMakeFiles\\CMakeScratch\\TryCompile-2xlil4\\feature_tests.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_a084e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_a084e.dir\\feature_tests.cxx.obj  /out:cmTC_a084e.exe /implib:cmTC_a084e.lib /pdb:cmTC_a084e.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -192,8 +192,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-ocp6i3"
-      binary: "C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-ocp6i3"
+      source: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-fv1uqo"
+      binary: "C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-fv1uqo"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: "-m32"
@@ -203,11 +203,11 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/#/CLionProjects/untitled/build/debug/CMakeFiles/CMakeScratch/TryCompile-ocp6i3'
+        Change Dir: 'C:/Users/#/Documents/battery-viewer/build/debug/CMakeFiles/CMakeScratch/TryCompile-fv1uqo'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_65ff5
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP   -m32  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_65ff5.dir\\feature_tests.cxx.obj /FdCMakeFiles\\cmTC_65ff5.dir\\ -c -- C:\\Users\\#\\CLionProjects\\untitled\\build\\debug\\CMakeFiles\\CMakeScratch\\TryCompile-ocp6i3\\feature_tests.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_65ff5.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_65ff5.dir\\feature_tests.cxx.obj  /out:cmTC_65ff5.exe /implib:cmTC_65ff5.lib /pdb:cmTC_65ff5.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_91944
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP   -m32  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_91944.dir\\feature_tests.cxx.obj /FdCMakeFiles\\cmTC_91944.dir\\ -c -- C:\\Users\\#\\Documents\\battery-viewer\\build\\debug\\CMakeFiles\\CMakeScratch\\TryCompile-fv1uqo\\feature_tests.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_91944.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\LLVM\\bin\\lld-link.exe /nologo CMakeFiles\\cmTC_91944.dir\\feature_tests.cxx.obj  /out:cmTC_91944.exe /implib:cmTC_91944.lib /pdb:cmTC_91944.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
 ...
