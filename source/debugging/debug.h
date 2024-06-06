@@ -7,6 +7,9 @@
 
 #define DEBUG_PRINT(message, color) DebugLog(message, color, __func__, __LINE__)
 
+#define DEBUG_ASSERT(message, title, type) \
+    DebugPrint::Assert(message, title, type, __func__, __LINE__)
+
 enum Color {
     BLACK, BLUE, GREEN, CYAN, RED, MAGENTA, BROWN, LIGHTGRAY, DARKGRAY, LIGHTBLUE, LIGHTGREEN, LIGHTCYAN, LIGHTRED, LIGHTMAGENTA, YELLOW, WHITE
 };
@@ -17,7 +20,7 @@ class DebugPrint {
 
         void Print(std::string message, Color color);
 
-        void Assert(std::string message, std::string title, UINT type);
+        static void Assert(std::string message, std::string title, UINT type, const char* calling_function, int calling_line);
 
         void Blank();
 

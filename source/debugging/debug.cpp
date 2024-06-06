@@ -23,10 +23,13 @@ void DebugPrint::Print(std::string message, Color color) // NOLINT
     TextColor(WHITE); // restore color
 }
 
-void DebugPrint::Assert(std::string message, std::string title, UINT type) //NOLINT
+void DebugPrint::Assert(std::string message, std::string title, UINT type, const char* calling_function, int calling_line) //NOLINT
 {
-    MessageBoxA(nullptr, message.c_str(), title.c_str(), type);
+    std::string message_box_message = "Assert triggered\n" + std::string(calling_function) + "@" + std::to_string(calling_line) + "\n" + message;
+
+    MessageBoxA(nullptr, message_box_message.c_str(), title.c_str(), type);
 }
+
 void DebugPrint::Blank() //NOLINT
 {
     std::cout << std::endl;
