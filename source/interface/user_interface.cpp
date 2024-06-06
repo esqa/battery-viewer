@@ -28,6 +28,8 @@ void UserInterface::DisplayMenu() {
 
     //GetUserInput();
 
+    m_window_center = 1000;
+
     while (!m_wants_to_exit_program) {
         GetWindowRect(hwnd, &rect);
 
@@ -40,15 +42,16 @@ void UserInterface::DisplayMenu() {
             m_resize_state = true;
         }
 
-        m_window_width = m_previous_window_rect.left - m_previous_window_rect.right;
-        m_window_height = m_previous_window_rect.top - m_previous_window_rect.bottom;
+        m_window_width = std::abs(m_previous_window_rect.left - m_previous_window_rect.right);
+        m_window_height = std::abs(m_previous_window_rect.top - m_previous_window_rect.bottom);
 
         m_window_center = std::abs(m_window_width / 2);
 
         Padding();
 
-        if (!m_window_center) {
-            debug_start.Assert("Center is 0", "Error", MB_ICONERROR);
+        if (m_window_width < MINIMUM_WINDOW_WIDTH || m_window_height < MINIMUM_WINDOW_HEIGHT) {
+            DEBUG_ASSERT("Window is too small", "Window Size", MB_ICONERROR);
+            SetWindowPos(hwnd, HWND_TOP, 0, 0, 800, 600, SWP_NOMOVE);
         }
 
         std::string width_string = std::to_string(m_window_width);

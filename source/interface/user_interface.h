@@ -5,6 +5,9 @@
 #define ASK_USER_OPTION_MAIN "Press 1 to enter the main menu"
 #define ASK_USER_OPTION_SETTINGS " 2 to enter the settings menu"
 
+#define MINIMUM_WINDOW_WIDTH 250
+#define MINIMUM_WINDOW_HEIGHT 100
+
 #define EXIT_PROGRAM_HINT " Press 'CTRL' and '+' to exit"
 
 enum Padding {
