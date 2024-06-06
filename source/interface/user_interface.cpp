@@ -105,7 +105,7 @@ void UserInterface::SettingsMenu() { //NOLINT
 
     std::cin >> m_user_input;
 
-    if (m_user_input == "blue") {
+    if (std::string_view{m_user_input}.contains("blue")) {
         debug_start.Blank();
         debug_start.Print(m_window_padding + "This is an example.", BLUE);
         debug_start.Blank();

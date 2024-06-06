@@ -9,7 +9,7 @@
 - Most functions are documented
 
 ## Additional
-- Compiled in clang with c++17 standard
+- Compiled in clang with c++26 standard
 
 ## Problems
 
