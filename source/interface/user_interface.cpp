@@ -57,7 +57,7 @@ void UserInterface::DisplayMenu() {
         std::string width_string = std::to_string(m_window_width);
         std::string height_string = std::to_string(m_window_height);
 
-        if (m_resize_state || input_start.IsKeyPressed(0x31)) {// window was resized
+        if (m_resize_state || input_start.IsKeyPressed(ONE)) {// window was resized
             system("cls");   // reset everything
 
             debug_start.Print(m_window_padding + ASK_USER_EXIT, LIGHTGRAY);
@@ -72,7 +72,6 @@ void UserInterface::DisplayMenu() {
         }
 
         if (input_start.IsKeyPressed(0x32)) {
-            system("cls");
             SettingsMenu();
         }
     }
@@ -95,6 +94,8 @@ void UserInterface::Padding() { //NOLINT
 void UserInterface::SettingsMenu() {
     DebugPrint debug_start{};
     InputManager input_start{};
+
+    system("cls");
 
     debug_start.Blank();
     debug_start.Print(m_window_padding + ASK_USER_OPTION_MAIN, DARKGRAY);
