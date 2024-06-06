@@ -44,6 +44,10 @@ class UserInterface {
         void Padding();
 
         void SettingsMenu();
+
+        void Navigation();
+
+        void ExitNavigation();
 };
 
 #endif //UNTITLED_USER_INTERFACE_H

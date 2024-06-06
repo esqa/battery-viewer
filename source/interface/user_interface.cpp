@@ -6,11 +6,9 @@
 
 #include "user_interface.h"
 
-
 void UserInterface::DisplayMenu() {
     DebugPrint debug_start{};
     InputManager input_start{};
-
 
     HWND hwnd = GetConsoleWindow();
     RECT rect;
@@ -20,11 +18,8 @@ void UserInterface::DisplayMenu() {
     m_previous_window_rect = rect;
     m_wants_to_exit_program = false;
 
-    debug_start.Print(ASK_USER_EXIT, LIGHTGRAY);
-    debug_start.Print(EXIT_PROGRAM_HINT, DARKGRAY);
-    debug_start.Blank();
-    debug_start.Print(m_window_padding + ASK_USER_OPTION_MAIN, DARKGRAY);
-    debug_start.Print(m_window_padding + ASK_USER_OPTION_SETTINGS, DARKGRAY);
+    ExitNavigation();
+    Navigation();
 
     //GetUserInput();
 
@@ -60,18 +55,15 @@ void UserInterface::DisplayMenu() {
         if (m_resize_state || input_start.IsKeyPressed(ONE)) {// window was resized
             system("cls");   // reset everything
 
-            debug_start.Print(m_window_padding + ASK_USER_EXIT, LIGHTGRAY);
-            debug_start.Print(m_window_padding + EXIT_PROGRAM_HINT, DARKGRAY);
-            debug_start.Blank();
-            debug_start.Print(m_window_padding + ASK_USER_OPTION_MAIN, DARKGRAY);
-            debug_start.Print(m_window_padding + ASK_USER_OPTION_SETTINGS, DARKGRAY);
+            ExitNavigation();
+            Navigation();
         }
 
         if (input_start.MultipleKeyPressed(VK_CONTROL, VK_OEM_PLUS)) {
             m_wants_to_exit_program = true;
         }
 
-        if (input_start.IsKeyPressed(0x32)) {
+        if (input_start.IsKeyPressed(TWO)) {
             SettingsMenu();
         }
     }
@@ -91,16 +83,30 @@ void UserInterface::Padding() { //NOLINT
         m_window_padding = "                ";
     }
 }
+
 void UserInterface::SettingsMenu() {
     DebugPrint debug_start{};
     InputManager input_start{};
 
     system("cls");
 
+    Navigation();
+
+    debug_start.Print(m_window_padding + "Settings Menu", LIGHTGREEN);
+}
+
+void UserInterface::Navigation() {
+    DebugPrint debug_start{};
+
     debug_start.Blank();
     debug_start.Print(m_window_padding + ASK_USER_OPTION_MAIN, DARKGRAY);
     debug_start.Print(m_window_padding + ASK_USER_OPTION_SETTINGS, DARKGRAY);
     debug_start.Blank();
+}
 
-    debug_start.Print(m_window_padding + "Settings Menu", LIGHTGREEN);
+void UserInterface::ExitNavigation() {
+    DebugPrint debug_start{};
+
+    debug_start.Print(m_window_padding + ASK_USER_EXIT, LIGHTGRAY);
+    debug_start.Print(m_window_padding + EXIT_PROGRAM_HINT, DARKGRAY);
 }
