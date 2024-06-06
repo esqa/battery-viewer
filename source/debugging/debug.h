@@ -1,5 +1,5 @@
-#ifndef UNTITLED_PRINTING_H
-#define UNTITLED_PRINTING_H
+#ifndef UNTITLED_DEBUG_H
+#define UNTITLED_DEBUG_H
 
 #include <Windows.h>
 #include <iostream>
@@ -17,8 +17,10 @@ class DebugPrint {
 
         void Print(std::string message, Color color);
 
+        void Assert(std::string message, std::string title, UINT type);
+
     private:
         void TextColor(Color color);
 };
 
-#endif//UNTITLED_PRINTING_H
+#endif//UNTITLED_DEBUG_H

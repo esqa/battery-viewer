@@ -13,9 +13,14 @@ class UserInterface {
     public:
         void DisplayMenu();
 
+        void Padding();
+
     private:
         int m_window_width;
         int m_window_height;
+        int m_window_center;
+
+        std::string m_window_padding;
 
         bool m_wants_to_exit_program;
         bool m_resize_state;

@@ -1,4 +1,4 @@
-#include "../debug/printing.h"
+#include "../debugging/debug.h"
 #include "../interface/user_interface.h"
 
 #include "main.h"

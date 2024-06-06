@@ -1,4 +1,4 @@
-#include "printing.h"
+#include "debug.h"
 
 void DebugPrint::TextColor(Color color) // NOLINT
 {
@@ -21,4 +21,8 @@ void DebugPrint::Print(std::string message, Color color) // NOLINT
     std::cout << message << std::endl;
 
     TextColor(WHITE); // restore color
+}
+
+void DebugPrint::Assert(std::string message, std::string title, UINT type) { //NOLINT
+    MessageBoxA(nullptr, message.c_str(), title.c_str(), type);
 }

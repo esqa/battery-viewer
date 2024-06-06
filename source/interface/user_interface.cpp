@@ -1,6 +1,6 @@
 #include <windows.h>
 
-#include "../debug/printing.h"
+#include "../debugging/debug.h"
 #include "../main/main.h"
 #include "user_interface.h"
 
@@ -33,21 +33,12 @@ void UserInterface::DisplayMenu() {
         m_window_width = m_previous_window_rect.left - m_previous_window_rect.right;
         m_window_height = m_previous_window_rect.top - m_previous_window_rect.bottom;
 
-        int center = std::abs(m_window_width / 2);
+        m_window_center = std::abs(m_window_width / 2);
 
-        std::string padding;
+        Padding();
 
-        // I don't know how to use for loops properly, can't use switch case here, unfortunately.
-        if (center > padding_large) {
-            padding = "                                                                                    ";
-        } else if (center > padding_medium ) {
-            padding = "                                                              ";
-        } else if (center > padding_small) {
-            padding = "                                                ";
-        } else if (center > padding_smallest) {
-            padding = "                                  ";
-        } else {
-            padding = "                ";
+        if (!m_window_center) {
+            debug_start.Assert("Center is 0", "Error", MB_ICONERROR);
         }
 
         std::string width_string = std::to_string(m_window_width);
@@ -55,13 +46,29 @@ void UserInterface::DisplayMenu() {
 
         if (m_resize_state) { // window was resized
             system("cls"); // reset everything
-            
-            debug_start.Print(padding + "Want to exit program?", LIGHTGRAY);
-            debug_start.Print(padding + "  Press 'Y' to exit", DARKGRAY);
+
+            debug_start.Print(m_window_padding + "Want to exit program?", LIGHTGRAY);
+            debug_start.Print(m_window_padding + "  Press 'Y' to exit", DARKGRAY);
         }
+
 
         if (GetAsyncKeyState('Y') & 0x8000) {
             m_wants_to_exit_program = true;
         }
+    }
+}
+
+void UserInterface::Padding() {
+    // I don't know how to use for loops properly, can't use switch case here, unfortunately.
+    if (m_window_center > padding_large) {
+        m_window_padding = "                                                                                    ";
+    } else if (m_window_center > padding_medium ) {
+        m_window_padding = "                                                              ";
+    } else if (m_window_center > padding_small) {
+        m_window_padding = "                                                ";
+    } else if (m_window_center > padding_smallest) {
+        m_window_padding = "                                  ";
+    } else {
+        m_window_padding = "                ";
     }
 }
