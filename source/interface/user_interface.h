@@ -1,6 +1,12 @@
 #ifndef UNTITLED_USER_INTERFACE_H
 #define UNTITLED_USER_INTERFACE_H
 
+#define ASK_USER_EXIT "     Want to exit program?"
+#define ASK_USER_OPTION_MAIN "Press 1 to enter the main menu"
+#define ASK_USER_OPTION_SETTINGS " 2 to enter the settings menu"
+
+#define EXIT_PROGRAM_HINT " Press 'CTRL' and '+' to exit"
+
 enum Padding {
     padding_large = 700,
     padding_medium = 600,
@@ -9,16 +15,21 @@ enum Padding {
     padding_count = 5
 };
 
+enum MenuOptions {
+    menu_main = 1,
+    menu_settings,
+};
+
 class UserInterface {
     public:
         void DisplayMenu();
-
-        void Padding();
 
     private:
         int m_window_width;
         int m_window_height;
         int m_window_center;
+
+        int m_user_input;
 
         std::string m_window_padding;
 
@@ -27,6 +38,9 @@ class UserInterface {
 
         RECT m_previous_window_rect;
 
+        void Padding();
+
+        void SettingsMenu();
 };
 
-#endif//UNTITLED_USER_INTERFACE_H
+#endif //UNTITLED_USER_INTERFACE_H

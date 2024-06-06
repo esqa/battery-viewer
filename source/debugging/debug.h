@@ -19,6 +19,8 @@ class DebugPrint {
 
         void Assert(std::string message, std::string title, UINT type);
 
+        void Blank();
+
     private:
         void TextColor(Color color);
 };

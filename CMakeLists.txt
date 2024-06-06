@@ -8,4 +8,6 @@ add_executable(untitled source/main/main.cpp
         source/debugging/debug.cpp
         source/debugging/debug.h
         source/interface/user_interface.cpp
-        source/interface/user_interface.h)
+        source/interface/user_interface.h
+        source/input_manager/input.cpp
+        source/input_manager/input.h)

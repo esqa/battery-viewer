@@ -1,11 +1,16 @@
 #include <windows.h>
 
 #include "../debugging/debug.h"
+#include "../input_manager/input.h"
 #include "../main/main.h"
+
 #include "user_interface.h"
+
 
 void UserInterface::DisplayMenu() {
     DebugPrint debug_start{};
+    InputManager input_start{};
+
 
     HWND hwnd = GetConsoleWindow();
     RECT rect;
@@ -15,8 +20,13 @@ void UserInterface::DisplayMenu() {
     m_previous_window_rect = rect;
     m_wants_to_exit_program = false;
 
-    debug_start.Print("Want to exit program?", LIGHTGRAY);
-    debug_start.Print("  Press 'Y' to exit", DARKGRAY);
+    debug_start.Print(ASK_USER_EXIT, LIGHTGRAY);
+    debug_start.Print(EXIT_PROGRAM_HINT, DARKGRAY);
+    debug_start.Blank();
+    debug_start.Print(m_window_padding + ASK_USER_OPTION_MAIN, DARKGRAY);
+    debug_start.Print(m_window_padding + ASK_USER_OPTION_SETTINGS, DARKGRAY);
+
+    //GetUserInput();
 
     while (!m_wants_to_exit_program) {
         GetWindowRect(hwnd, &rect);
@@ -44,25 +54,32 @@ void UserInterface::DisplayMenu() {
         std::string width_string = std::to_string(m_window_width);
         std::string height_string = std::to_string(m_window_height);
 
-        if (m_resize_state) { // window was resized
-            system("cls"); // reset everything
+        if (m_resize_state || input_start.IsKeyPressed(0x31)) {// window was resized
+            system("cls");   // reset everything
 
-            debug_start.Print(m_window_padding + "Want to exit program?", LIGHTGRAY);
-            debug_start.Print(m_window_padding + "  Press 'Y' to exit", DARKGRAY);
+            debug_start.Print(m_window_padding + ASK_USER_EXIT, LIGHTGRAY);
+            debug_start.Print(m_window_padding + EXIT_PROGRAM_HINT, DARKGRAY);
+            debug_start.Blank();
+            debug_start.Print(m_window_padding + ASK_USER_OPTION_MAIN, DARKGRAY);
+            debug_start.Print(m_window_padding + ASK_USER_OPTION_SETTINGS, DARKGRAY);
         }
 
-
-        if (GetAsyncKeyState('Y') & 0x8000) {
+        if (input_start.MultipleKeyPressed(VK_CONTROL, VK_OEM_PLUS)) {
             m_wants_to_exit_program = true;
+        }
+
+        if (input_start.IsKeyPressed(0x32)) {
+            system("cls");
+            SettingsMenu();
         }
     }
 }
 
-void UserInterface::Padding() {
+void UserInterface::Padding() { //NOLINT
     // I don't know how to use for loops properly, can't use switch case here, unfortunately.
     if (m_window_center > padding_large) {
         m_window_padding = "                                                                                    ";
-    } else if (m_window_center > padding_medium ) {
+    } else if (m_window_center > padding_medium) {
         m_window_padding = "                                                              ";
     } else if (m_window_center > padding_small) {
         m_window_padding = "                                                ";
@@ -71,4 +88,15 @@ void UserInterface::Padding() {
     } else {
         m_window_padding = "                ";
     }
+}
+void UserInterface::SettingsMenu() {
+    DebugPrint debug_start{};
+    InputManager input_start{};
+
+    debug_start.Blank();
+    debug_start.Print(m_window_padding + ASK_USER_OPTION_MAIN, DARKGRAY);
+    debug_start.Print(m_window_padding + ASK_USER_OPTION_SETTINGS, DARKGRAY);
+    debug_start.Blank();
+
+    debug_start.Print(m_window_padding + "Settings Menu", LIGHTGREEN);
 }
