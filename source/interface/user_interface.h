@@ -32,8 +32,9 @@ class UserInterface {
         int m_window_height;
         int m_window_center;
 
-        int m_user_input;
+        Color m_input_color;
 
+        std::string m_user_input;
         std::string m_window_padding;
 
         bool m_wants_to_exit_program;

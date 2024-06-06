@@ -84,7 +84,7 @@ void UserInterface::Padding() { //NOLINT
     }
 }
 
-void UserInterface::SettingsMenu() {
+void UserInterface::SettingsMenu() { //NOLINT
     DebugPrint debug_start{};
     InputManager input_start{};
 
@@ -93,6 +93,27 @@ void UserInterface::SettingsMenu() {
     Navigation();
 
     debug_start.Print(m_window_padding + "Settings Menu", LIGHTGREEN);
+    debug_start.Blank();
+    debug_start.Print(m_window_padding + "Select Accent Color", LIGHTGRAY);
+    debug_start.Blank();
+    debug_start.Print(m_window_padding + "This is an example.", LIGHTGRAY);
+    debug_start.Blank();
+
+    std::cout << m_window_padding + "Enter color: ";
+
+    std::cin.clear();
+
+    std::cin >> m_user_input;
+
+    if (m_user_input == "blue") {
+        debug_start.Blank();
+        debug_start.Print(m_window_padding + "This is an example.", BLUE, false);
+        debug_start.Blank();
+        Sleep(500);
+        SettingsMenu();
+    } else {
+        SettingsMenu();
+    }
 }
 
 void UserInterface::Navigation() {
