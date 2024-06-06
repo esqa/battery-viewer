@@ -107,10 +107,11 @@ void UserInterface::SettingsMenu() { //NOLINT
 
     if (m_user_input == "blue") {
         debug_start.Blank();
-        debug_start.Print(m_window_padding + "This is an example.", BLUE, false);
+        debug_start.Print(m_window_padding + "This is an example.", BLUE);
         debug_start.Blank();
         Sleep(500);
-        SettingsMenu();
+        system("cls");
+        DisplayMenu();
     } else {
         SettingsMenu();
     }
