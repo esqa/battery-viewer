@@ -95,10 +95,13 @@ void UserInterface::SettingsMenu() { //NOLINT
     debug_start.Print(m_window_padding + "Enter input mode? (y/n)", RED);
     debug_start.Blank();
 
-    if (input_start.IsKeyPressed(FOUR)) {
+    std::string input_mode_selection;
+
+    std::cin >> input_mode_selection;
+
+    if (std::string_view {input_mode_selection}.contains("y")) {
         m_input_mode = true;
-        debug_start.DEBUG_PRINT("Input mode enabled", GREEN);
-    } else if( input_start.IsKeyPressed(N)) {
+    } else {
         m_input_mode = false;
     }
 
@@ -169,6 +172,6 @@ void UserInterface::ExitNavigation() {
     debug_start.Print(m_window_padding + EXIT_PROGRAM_HINT, DARKGRAY);
 }
 
-void UserInterface::ClearScreen() {
+void UserInterface::ClearScreen() { //NOLINT
     system("cls");
 }
