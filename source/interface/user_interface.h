@@ -27,7 +27,7 @@ enum MenuOptions {
 
 class UserInterface {
     public:
-        UserInterface() // intializes all members
+        UserInterface() // initializes all members
         {
             //public members
             window_resize_state = false;
