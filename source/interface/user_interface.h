@@ -27,6 +27,29 @@ enum MenuOptions {
 
 class UserInterface {
     public:
+        UserInterface() // intializes all members
+        {
+            //public members
+            window_resize_state = false;
+
+            //private members
+            m_window_width  = 0;
+            m_window_height = 0;
+            m_window_center = 0;
+
+            m_input_color = Color::WHITE;
+
+            m_user_input     = "";
+            m_window_padding = "";
+
+            m_wants_to_exit_program = false;
+            m_settings_menu         = false;
+            m_main_menu             = true;
+            m_input_mode            = false;
+        }
+
+        // no deconstructor needed - no dynamic memory allocation
+
         void DisplayMenu();
 
         bool window_resize_state;
@@ -46,18 +69,13 @@ class UserInterface {
         bool m_main_menu;
         bool m_input_mode;
 
-        RECT m_previous_window_rect;
+        RECT m_previous_window_rect{};
 
         void Padding();
-
         void SettingsMenu();
-
         void DirectoryMenu();
-
         void Navigation();
-
         void ExitNavigation();
-
         void ClearScreen();
 };
 
